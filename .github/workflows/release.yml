@@ -1,0 +1,25 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    name: Publish Plugin ZIP
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Create Plugin ZIP
+      run: ./create_plugin_zip.sh
+
+    - name: Upload Plugin ZIP to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: codebarista_no_trailing_slash_seo_url_*.zip
+        tag: ${{ github.ref }}
+        overwrite: true

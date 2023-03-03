@@ -1,0 +1,42 @@
+{
+  "name": "codebarista/notrailingslashseourl",
+  "version": "1.0.0",
+  "description": "Allows SEO URLs without a trailing slash.",
+  "type": "shopware-platform-plugin",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Codebarista",
+      "homepage": "https://codebarista.de/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Codebarista\\": "src/"
+    }
+  },
+  "require": {
+    "shopware/core": "~6.4",
+    "shopware/storefront": "~6.4"
+  },
+  "extra": {
+    "shopware-plugin-class": "Codebarista\\BaristaNoTrailingSlashSeoUrl",
+    "copyright": "Codebarista",
+    "label": {
+      "de-DE": "SEO Kategorie URLs ohne abschließenden Schrägstrich",
+      "en-GB": "SEO category URLs without trailing slash"
+    },
+    "description": {
+      "de-DE": "Diese Erweiterung ermöglicht die Verwendung von SEO-URLs für Kategorien ohne abschließenden Schrägstrich. Ohne diese Erweiterung führen SEO URLs von Kategorien, bei denen der abschließende Schrägstrich fehlt zu einer '404 Not Found' Fehlerseite. Mit dieser Erweiterung führen dieselben URLs zur gewünschten Kategorieseite Seite. Dabei wird die Shopware SEO Einstellung zum Verhalten bei Weiterleitung berücksichtigt: 301 Weiterleitung oder rel=\"canonical\" HTTP header.",
+      "en-GB": "This extension allows you to use SEO URLs for categories without a trailing slash. Without this extension, URLs without a trailing slash would lead to a 404 Not Found error page. With this extension, those same URLs will lead to the expected category page. Additionally, the extension respects your chosen SEO forwarding behavior setting, either a 301 redirect or a rel=\"canonical\" HTTP header."
+    },
+    "manufacturerLink": {
+      "de-DE": "https://codebarista.de/",
+      "en-GB": "https://codebarista.de/"
+    },
+    "supportLink": {
+      "de-DE": "https://codebarista.de/",
+      "en-GB": "https://codebarista.de/"
+    }
+  }
+}

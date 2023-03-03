@@ -1,0 +1,17 @@
+name: Package
+
+on: [workflow_dispatch, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create Plugin ZIP
+        run: ./create_plugin_zip.sh
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: codebarista_no_trailing_slash_seo_url_*.zip
