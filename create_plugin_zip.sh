@@ -16,6 +16,7 @@ rm -f "$out_file"
 
 ( cd /tmp && zip -r "$out_file" "$root_folder" \
  -x "$root_folder/.*" \
+ -x "$root_folder/.xcf" \
  -x "$root_folder/bin*" \
  -x "$root_folder/*.sh" \
  -x "$root_folder/*.zip" \
