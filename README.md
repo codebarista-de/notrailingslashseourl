@@ -2,7 +2,10 @@
 
 Allows SEO URLs for categories without a trailing slash. 
 
-Without this extension, category URLs that do not end with a trailing slash would lead to a 404 Not Found error page.
+Without this extension, category URLs that do not end with a trailing slash would_
+ * before 6.6.1.0 - lead to a 404 Not Found error page.
+ * [since 6.6.1.0](https://github.com/shopware/shopware/pull/3040) - yield the same page as the URL with a trailing slash, which might be penalized by search engines as duplicate conent.
+
 With this extension, those URLs will lead to the expected category page.
 The extension respects Shopware's SEO forwarding behavior setting, either a 301 redirect or a rel=\"canonical\" HTTP header.
 

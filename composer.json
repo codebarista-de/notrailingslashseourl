@@ -1,6 +1,6 @@
 {
   "name": "codebarista/notrailingslashseourl",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Allows SEO URLs without a trailing slash.",
   "type": "shopware-platform-plugin",
   "license": "GPL-3.0-or-later",

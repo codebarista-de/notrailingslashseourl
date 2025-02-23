@@ -12,6 +12,6 @@ jobs:
       - name: Create Plugin ZIP
         run: ./create_plugin_zip.sh
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: codebarista_no_trailing_slash_seo_url_*.zip
